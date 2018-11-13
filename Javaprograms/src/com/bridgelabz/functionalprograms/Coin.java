@@ -1,40 +1,39 @@
 package com.bridgelabz.functionalprograms;
-import com.bridgelabz.utility.*;
-import java.lang.Math;
+import com.bridgelabz.utility.Utility;
+
 public class Coin 
 {
 	public static void main(String args[])
     {
 	
-	int no_of_trials;
-	int hcnt;
-    int tcnt;
-	
-	double hper;
-	double tper;
+	int numoftrials;
+	int headcount;
+    int tailcount;
+	double headpercent;
+	double tailpecent;
 	String result;
 	
-	CoinFunction cfun=new CoinFunction();
+	Utility utility=new Utility();
 	System.out.println("Enter the number of times to Flip Coin:");
-	no_of_trials=cfun.getInput();
-	double arr_rn[]=cfun.genrateRandom(no_of_trials);
+	numoftrials=utility.getInput();
+	double randomnumberarray[]=utility.genrateRandom(numoftrials);
 	
 	System.out.println("head count is:");
-	hcnt=cfun.headCount(no_of_trials,arr_rn);
-	System.out.println(hcnt);
+	headcount=utility.headCount(numoftrials,randomnumberarray);
+	System.out.println(headcount);
 	
 	System.out.println("Tail count is:");
-	tcnt=cfun.tailCount(no_of_trials,arr_rn);
-	System.out.println(tcnt);
+	tailcount=utility.tailCount(numoftrials,randomnumberarray);
+	System.out.println(tailcount);
 	
 	
-	hper=cfun.headPercent(no_of_trials,hcnt);
-	System.out.println("percentage of head:"+hper);
+	headpercent=utility.headPercent(numoftrials,headcount);
+	System.out.println("percentage of head:"+headpercent);
 	
-	tper=cfun.tailPercent(no_of_trials,tcnt);
-	System.out.println("percentage of tail:"+tper);
+	tailpecent=utility.tailPercent(numoftrials,tailcount);
+	System.out.println("percentage of tail:"+tailpecent);
 	
-	result=cfun.compare(hper,tper);
+	result=utility.compare(headcount,tailpecent);
 	System.out.println(result);
 	
 	}

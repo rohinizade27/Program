@@ -1,20 +1,16 @@
 package com.bridgelabz.functionalprograms;
-import com.bridgelabz.utility.*;
+import com.bridgelabz.utility.Utility;
 
 public class PrimeFactor 
 {
 
     public static void main(String args[]) 
     {
-       PrimeFunction pf=new PrimeFunction();
+       Utility utility=new Utility();
        System.out.println("Enter the number:");
-       int number=pf.inputFunction();
+       int number=utility.getInput();
        System.out.println("prime factors of given number are:");
-       int num=pf.primeFactors(number); 
-       System.out.println(num);
-
-       
-       
-       
+       int primefactor=utility.primeFactors(number); 
+       System.out.println(primefactor);
     }
 }

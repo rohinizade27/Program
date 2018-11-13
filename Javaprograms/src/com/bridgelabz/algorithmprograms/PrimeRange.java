@@ -10,8 +10,8 @@ public class PrimeRange
     System.out.println("ENTER THE UPPER LIMIT");
     int upper_limit=util.acceptLimits();
     
-    System.out.println("prime number between given range");
-    //int prime_number=util.findPrimeRange(lower_limit, upper_limit);
+    System.out.println("prime number between given range are:");
+    util.findPrimeRange(lower_limit, upper_limit);
     
   }
 }

@@ -1,14 +1,13 @@
 package com.bridgelabz.functionalprograms;
-
-import com.bridgelabz.utility.WindChillFunction;
-
-public class WindChill {
+import com.bridgelabz.utility.Utility;
+public class WindChill
+{
 	public static void main(String args[])
 	{
-		WindChillFunction wcf=new WindChillFunction();
+		Utility utility=new Utility();
 		int t= Integer.parseInt(args[0]);
 		int v= Integer.parseInt(args[1]);
-		wcf.computeWindChill(t,v);
+		 utility.computeWindChill(t,v);
 		//System.out.println(w);
 	}
 

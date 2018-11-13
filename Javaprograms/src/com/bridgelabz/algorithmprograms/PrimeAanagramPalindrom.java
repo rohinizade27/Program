@@ -11,10 +11,10 @@ public class PrimeAanagramPalindrom
 	    int upper_limit=util.acceptLimits();
 	    
 	    System.out.println("prime number between given range");
-	    int prime_number[]=util.findPrimeRange(lower_limit, upper_limit);
-	    for(int i = 0;i<prime_number.length;i++)
+	    //int prime_number[]=util.findPrimeRange(lower_limit, upper_limit);
+	   // for(int i = 0;i<prime_number.length;i++)
 		{
-			System.out.println(prime_number[i]);
+		//	System.out.println(prime_number[i]);
 		}
 	}
 }

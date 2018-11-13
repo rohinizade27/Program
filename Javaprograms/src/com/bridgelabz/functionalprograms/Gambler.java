@@ -1,19 +1,18 @@
 package com.bridgelabz.functionalprograms;
-import com.bridgelabz.utility.GamblerFunction;
+import com.bridgelabz.utility.Utility;
 
 public class Gambler 
 {
 	public static void main(String args[])
 	{
 		
-		GamblerFunction gfun=new GamblerFunction();
+		Utility utility=new Utility();
 		System.out.println("Enter the number of trials:");
-		int trials=gfun.input();
+		int trials= utility.getInput();
 		System.out.println("Enter the stake:");
-		int stake=gfun.input();
+		int stake= utility.getInput();
 		System.out.println("Enter the goal:");
-		int goal=gfun.input();
-		
-		int result=gfun.gamblerLogic(trials,stake,goal);
+		int goal= utility.getInput();
+	    utility.gamblerLogic(trials,stake,goal);
 	}
 }

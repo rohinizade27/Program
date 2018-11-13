@@ -5,13 +5,11 @@ public class ReplaceString
 {
 	public static void main( String args[])
 	{
-		ReplaceStringFunction rsf=new ReplaceStringFunction();
+		Utility utility=new Utility();
 		String template="hello <<username>>";
 		System.out.println("Enter name:");
-		String name=rsf.acceptString();
-		String result=rsf.replacestr(template,name);
+		String name=utility.inputString();
+		String result=utility.replacestring(template,name);
 		System.out.println(result);
 	}
-	
-
 }

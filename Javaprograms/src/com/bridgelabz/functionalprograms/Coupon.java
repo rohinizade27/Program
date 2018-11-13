@@ -1,14 +1,14 @@
 package com.bridgelabz.functionalprograms;
-import com.bridgelabz.utility.CouponFunction;
+import com.bridgelabz.utility.Utility;
 public class Coupon 
 {
 	public static void main(String args[])
 	{
-	    CouponFunction cf=new CouponFunction ();
+		Utility utility=new Utility();
 		System.out.println("Enter the N distinct coupan number:");
-		int n=cf.inputFunction();
+		int number=utility.getInput();
 		
-		int distinct=cf.findDistinct(n);
+		int distinct=utility.findDistinct(number);
 		System.out.println("Total Distinct Coupons:"+ distinct);
 	}
 }

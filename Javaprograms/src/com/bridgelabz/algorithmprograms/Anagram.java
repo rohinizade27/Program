@@ -11,7 +11,7 @@ public class Anagram
 		System.out.println("Enter 2nd String");
 		String string2=util.acceptString();
 		
-		boolean result =util.checkAnagram(string1,string2);
+		util.checkAnagram(string1,string2);
 	}
 
 }

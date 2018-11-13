@@ -1,12 +1,12 @@
 package com.bridgelabz.functionalprograms;
-import com.bridgelabz.utility.PowerOfTwoFunction;
+import com.bridgelabz.utility.Utility;
 
 public class PowerOfTwo 
 {
  public static void main(String[] args) 
  {
-	 PowerOfTwoFunction pf=new  PowerOfTwoFunction();
-	 int n = Integer.parseInt(args[0]);
-	  pf.compute(n);
+	 Utility utility=new Utility();
+	 int number = Integer.parseInt(args[0]);
+	 utility.compute(number);
   }
 }

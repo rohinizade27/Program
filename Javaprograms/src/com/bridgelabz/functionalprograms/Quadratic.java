@@ -1,27 +1,24 @@
 package com.bridgelabz.functionalprograms;
-
-import com.bridgelabz.utility.QuadraticFunction;
+import com.bridgelabz.utility.Utility;
 
 public class Quadratic {
 	public static void main(String args[])
 	{
 		double a=0,b=0,c=0;
-		double root=0;
 		double delta=0;
-		QuadraticFunction qf=new QuadraticFunction();
+		Utility utility=new Utility();
 		
 		System.out.println("Enter value of a:");
-		a=qf.getInput();
+		a=utility.getInputDouble();
 		System.out.println("Enter value of b:");
-		b=qf.getInput();
+		b=utility.getInputDouble();
 		System.out.println("Enter value of c:");
-		c=qf.getInput();
+		c=utility.getInputDouble();
 		
 		System.out.println("delta:");
-	    delta=qf.computDelta(a,b,c);
-		
-		System.out.println("Root1 is:");
-		root=qf.findRoot(delta,a,b);
+	    delta=utility.computDelta(a,b,c);
+	    
+		utility.findRoot(delta,a,b);
 		
 	
 	}

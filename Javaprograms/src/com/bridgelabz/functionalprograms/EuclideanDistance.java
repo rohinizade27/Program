@@ -1,5 +1,5 @@
 package com.bridgelabz.functionalprograms;
-import com.bridgelabz.utility.EuclideanDistanceFunction;
+import com.bridgelabz.utility.Utility;
 
 public class EuclideanDistance 
 {
@@ -8,7 +8,7 @@ public class EuclideanDistance
 		double x= Double.parseDouble(args[0]);
 		double y= Double.parseDouble(args[1]);
 		
-		EuclideanDistanceFunction edf=new EuclideanDistanceFunction(); 
-		double result=edf.FindDistance(x,y);
+		Utility utility=new Utility();
+		utility.FindEuclideanDistance(x,y);
 	}
 }
