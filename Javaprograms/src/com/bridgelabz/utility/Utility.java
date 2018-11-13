@@ -463,9 +463,8 @@ public long stopTime(int input, long stoptime)
  */
 public void elapsedTime(long starttime, long stoptime)
 {
-	System.out.println("Hello");
 	long elapsed=stoptime-starttime;
-	System.out.println("elapsedtime" + elapsed/1000 + "  seconds");
+	System.out.println("Elapsed time is: " + elapsed/1000 + "  seconds");
 	
 }
 
