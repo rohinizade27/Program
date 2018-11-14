@@ -1,12 +1,13 @@
 package com.bridgelabz.utility;
 
 import java.io.PrintWriter;
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Utility  
 	{
-		Scanner scanner = new Scanner(System.in);
+		static Scanner scanner = new Scanner(System.in);
 
 	    /**
 	     * This method takes an input integer from the user and returns
@@ -582,9 +583,157 @@ public void  computeWindChill(int t, int v)
 	}
 	
 }
-/******************************************************************************************************/
+/*******************************Anagram***********************************************************************/
+
+/**
+ * @return
+ */
+public static String acceptString()
+{
+	String s1=scanner.nextLine();
+	return s1;
+}
+
+
+/**
+ * @param string1
+ * @param string2
+ */
+public static void checkAnagram(String string1, String string2)
+{
+	  
+	  string1= string1.replace(" ","");
+	  string2= string2.replace(" ","");
+	
+	  char[] ch1 = string1.toCharArray();
+	  char[] ch2 = string2.toCharArray();
+	  char[] LowerCasech2 =new char[ch1.length];
+	  char[] UpperCasech2 =new char[ch1.length];
+	  
+	  int isch1lowercase=0;
+	  int isch2lowercase=0;
+	  int isch1uppercase=0;
+	  int isch2uppercase=0;
+	  
+	  boolean result=false;
+	  
+	  Arrays.sort(ch1);
+	  Arrays.sort(ch2);
+	  for(int i=0;i<ch1.length;i++)
+	  {
+
+		  isch1lowercase=0;
+		  isch2lowercase=0;
+		  isch1uppercase=0;
+		  isch2uppercase=0;
+		  boolean result1=Character.isUpperCase(ch1[i]);
+		  boolean result2=Character.isUpperCase(ch2[i]);
+		  boolean result3=Character.isLowerCase(ch1[i]);
+		  boolean result4=Character.isLowerCase(ch2[i]);
+		  {
+			  if(result1==true)
+			  {
+				  if(result2==true)
+				  {
+					  isch1uppercase=1;
+					  isch2uppercase=1;
+				  }
+				  else if(result4==true)
+				  {
+					 UpperCasech2[i]=Character.toUpperCase(ch2[i]);
+					 isch1uppercase=1;
+					 isch2lowercase=1;
+				  }
+			   }
+			 else if(result3==true)
+			  {
+				  if(result2==true)
+				  {
+					 LowerCasech2[i]=Character.toLowerCase(ch2[i]);
+					  isch1lowercase=1;
+					  isch2uppercase=1;
+				  }
+				  else if(result4==true)
+				  {
+					isch1lowercase=1;
+					isch2lowercase=1;
+				  }
+			   }
+			}
+	  }
+	  if(isch1uppercase==1 && isch2uppercase==1)
+	  {
+		result = Arrays.equals(ch1,ch2);
+	  }
+      else if(isch1uppercase==1 && isch2lowercase==1)
+      {
+    	  result = Arrays.equals(ch1,UpperCasech2);
+      }
+      else if(isch1lowercase==1 && isch2uppercase==1)
+      {
+    	  result = Arrays.equals(ch1,LowerCasech2);
+      } 
+      else if(isch1lowercase==1 && isch2lowercase==1 )
+      {
+    	  result = Arrays.equals(ch1,ch2);
+      }
+	
+if(result==true)
+	System.out.println("Enter String is Anagram");
+else
+    System.out.println("Enter String is not Anagram");
+}
+	
+/******************************Prime_Range ***************************************************/
+
+/**
+ * This method is to accept lower and upper limit
+ * to generate prime number between this range
+ * @return integer:It returns the 
+ */
+public static Integer acceptLimits()
+{
+	Integer l=scanner.nextInt();
+	return l;
+}
+/**
+ * This method is to generate prime number between given range.
+ * @param lower_limit:lower limit of given range
+ * @param upper_limit:upper limit of given range
+ */
+public static void findPrimeRange(int lower_limit,int upper_limit)
+{
+	int i=0,j=0;
+	boolean isprime=false;
+	for( i=lower_limit;i<upper_limit;i++)
+	{     
+	 if(i==0 && i==1)
+		 continue;
+	 
+		for(j=2;j<i;j++)
+		{
+			if(i%j==0)
+			{
+				isprime=false;
+				break;
+			}
+			else
+			{ isprime=true; }
+		}
+		if(isprime==true)
+		{ 
+		 System.out.println(" "+i);
+		}
+		
+	}
+
+}
+
+/********************************************************************************************************************/
 	
 }
+
+
 	
 	
 
