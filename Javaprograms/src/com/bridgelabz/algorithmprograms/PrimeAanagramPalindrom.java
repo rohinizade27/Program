@@ -1,20 +1,22 @@
 package com.bridgelabz.algorithmprograms;
-import com.bridgelabz.utility.util;
+import com.bridgelabz.utility.Utility;
 
 public class PrimeAanagramPalindrom 
 {
 	public static void main(String args[])
 	{
 		System.out.println("ENTER THE LOWER LIMIT");
-	    int lower_limit=util.acceptLimits();
+	    int lowerlimit=Utility.acceptLimits();
 	    System.out.println("ENTER THE UPPER LIMIT");
-	    int upper_limit=util.acceptLimits();
+	    int upperlimit=Utility.acceptLimits();
 	    
-	    System.out.println("prime number between given range");
-	    //int prime_number[]=util.findPrimeRange(lower_limit, upper_limit);
-	   // for(int i = 0;i<prime_number.length;i++)
-		{
-		//	System.out.println(prime_number[i]);
-		}
+	    int primenumber[]=new int[upperlimit];
+	    
+	    System.out.println("prime number between given range are:");
+	    primenumber=Utility.findPrimeRange(lowerlimit, upperlimit);
+	     
+	    Utility.checkPalindrome(primenumber);
+	    Utility.checkAnagram(primenumber);
+	   
 	}
 }
